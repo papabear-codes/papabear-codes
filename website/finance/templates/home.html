@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+
+<h1>Codeloop.org</h1>
+<p>Django Tutorial Number 12 , Rendering Data From Mysql Database</p>
+
+<hr/>
+
+{% for news in object %}
+
+<div>
+    <h1>{{news.title}}</h1>
+    <h3>{{news.author}}</h3>
+    <p>{{news.description}}</p>
+   <hr/>
+
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
