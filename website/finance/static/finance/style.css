@@ -1,0 +1,60 @@
+body {
+    background-color: #1a1a1d;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+li a {
+    color: white;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid white;
+    color: white;
+}
+
+/* Table Head Styles */
+thead th {
+    text-align: left;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 30%;
+}
+
+thead th:nth-child(3) {
+    width: 10%;
+}
+
+thead th:nth-child(4) {
+    width: 15%;
+}
+
+thead th:nth-child(5) {
+    width: 15%;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.NegativeBetrag {
+    color: red;
+}
+
+.PositiveBetrag {
+    color: green;
+}

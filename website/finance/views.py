@@ -1,13 +1,9 @@
 from django.shortcuts import render
-from .models import News
+from .models import Konto, Umsatz
 
 def home(request):
-
-    obj = News.objects.all()
-
-    context = {"object":obj}
-
-    return render(request, "home.html", context)
+    saldo=Konto.objects.all()
+    return render(request, "home.html", {'saldo':saldo})
 
 
 def about(request):
@@ -15,3 +11,8 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def umsatz(request):
+    umsatz=Umsatz.objects.all().order_by('-datum')
+
+    return render(request, "umsatz.html", {'umsatz':umsatz})

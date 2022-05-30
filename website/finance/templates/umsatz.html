@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+<h1>{% block title %} Umsätze {% endblock %}</h1>
+
+
+{% block body %}
+
+
+
+<table>
+    <caption><h1>Umsätze in Tabelle</h1></caption>
+    <thead>
+        <tr>
+            <th scope="col">IBAN</th>
+            <th scope="col">Empfänger</th>
+            <th scope="col">Betrag</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in umsatz %}
+        <tr>
+            <td>{{x.empfaenger_konto}}</td>
+            <td>{{x.empfaenger_name}}</td>
+            <td>
+                {% if x.betrag < 0 %}
+                <div class="betrag NegativeBetrag">
+                {% else %}
+                <div class="betrag PositiveBetrag">
+                {% endif %}
+                    {{x.betrag}}
+                </div>
+                </td>
+            <td>{{x.datum}}</td>
+            <td>{{x.saldo}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+
+
+
+
+
+{% endblock %}
