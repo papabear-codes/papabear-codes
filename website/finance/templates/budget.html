@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock %}
+
+
+{% block body %}
+
+<h1>Budget</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Name:</p> <input type="text" name="name"/><br/>
+    <p>Budget:</p> <input type="text" name="budget"/><br/>
+    <input type="submit" value="Post"/>
+    </form>
+
+{% endblock %}
