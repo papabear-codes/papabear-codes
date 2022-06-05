@@ -8,13 +8,28 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
 </head>
- 
-{% include 'navbar.html' %}
+
+
+
+
  
 <body>
-{% block body %}
- 
- 
-{% endblock %}
+    <div id="wrapper">
+        <div id="main-header">
+        </div>
+        <div id="sidebar-wrapper">
+            <div id="main-sidebar">
+                {% block sidebar %}
+                {% include 'navbar.html' %}
+                {% endblock %}
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <div id="main-content">
+                {% block body %}
+                {% endblock %}
+            </div>
+    </div>
+    </div>
 </body>
 </html>

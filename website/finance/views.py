@@ -18,6 +18,7 @@ def umsatz(request):
     return render(request, "umsatz.html", {'umsatz':umsatz})
 
 def budget(request):
+    budget=Budget.objects.all().order_by('-id')
     if request.method == 'POST':
         if request.POST.get('name') and request.POST.get('budget'):
             budget=Budget()
@@ -27,6 +28,6 @@ def budget(request):
 
             return render(request, 'budget.html')
     else:
-        return render(request, 'budget.html')
+        return render(request, 'budget.html', {'budget':budget})
 
     return render(request, "budget.html")
