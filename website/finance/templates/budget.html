@@ -5,6 +5,44 @@
 
 {% block body %}
 
+<div id="budget-wrapper">
+    <div id="revenue">
+        <table>
+            <caption><h1>Einnahmen</h1></caption>
+            <thead>
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Betrag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="expenditure">
+        <table>
+            <caption><h1>Ausgaben</h1></caption>
+            <thead>
+                <tr>
+                    <th scope="col">Bezeichnung</th>
+                    <th scope="col">Betrag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
 <h1>Budget</h1>
 <form action="" method="POST">
     {% csrf_token %}

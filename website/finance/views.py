@@ -13,7 +13,7 @@ def contact(request):
     return render(request, "contact.html")
 
 def umsatz(request):
-    umsatz=Umsatz.objects.all().order_by('-id')
+    umsatz=Umsatz.objects.all().order_by('-id')[:25]
 
     return render(request, "umsatz.html", {'umsatz':umsatz})
 

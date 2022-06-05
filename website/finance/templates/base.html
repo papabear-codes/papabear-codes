@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
-
+<link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{% static 'finance/style.css' %}">
+
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +17,9 @@
 <body>
     <div id="wrapper">
         <div id="main-header">
+            <div id="header">
+                {% include 'header.html' %}
+            </div>
         </div>
         <div id="sidebar-wrapper">
             <div id="main-sidebar">
