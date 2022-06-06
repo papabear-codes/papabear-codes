@@ -7,23 +7,44 @@
 
 <div id="budget-wrapper">
     <div id="revenue">
-        <table>
+        <h1>Budgets</h1>
+        <hr/>
+        <button id="neue-quelle-button"><i class="fa-solid fa-plus"></i>&nbsp;Neue Quelle</button>
+        <hr/>
+        <table id="table-revenue">
             <caption><h1>Einnahmen</h1></caption>
             <thead>
                 <tr>
-                    <th scope="col">Bezeichnung</th>
+                    <th>&nbsp;</th>
+                    <th scope="col">Quelle</th>
                     <th scope="col">Betrag</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td><i class="fa-solid fa-bars t1"></i>&nbsp;<i class="fa-solid fa-pen-to-square t2"></i>&nbsp;<i class="fa-solid fa-trash-can t3"></i></td>
+                    <td>Test</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bars t1"></i>&nbsp;<i class="fa-solid fa-pen-to-square t2"></i>&nbsp;<i class="fa-solid fa-trash-can t3"></i></td>
+                    <td>Test</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bars t1"></i>&nbsp;<i class="fa-solid fa-pen-to-square t2"></i>&nbsp;<i class="fa-solid fa-trash-can t3"></i></td>
+                    <td>Test</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bars t1"></i>&nbsp;<i class="fa-solid fa-pen-to-square t2"></i>&nbsp;<i class="fa-solid fa-trash-can t3"></i></td>
                     <td>Test</td>
                     <td>123</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div id="expenditure">
+    <!-- <div id="expenditure">
         <table>
             <caption><h1>Ausgaben</h1></caption>
             <thead>
@@ -38,13 +59,15 @@
                     <td>123</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
     </div>
-
 </div>
-
-<h1>Budget</h1>
-<form action="" method="POST">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<!-- <form action="" method="POST">
     {% csrf_token %}
     <p>Name:</p> <input type="text" name="name"/><br/>
     <p>Budget:</p> <input type="text" name="budget"/><br/>
@@ -55,4 +78,4 @@
 {% for x in budget %}
 <p>{{x.name}},{{x.budget}}</p></br>
 {% endfor %}
-{% endblock %}
+{% endblock %} -->

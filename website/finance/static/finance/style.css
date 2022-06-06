@@ -14,7 +14,7 @@ table {
     margin-left: 10px;
     margin-right: 10px;
     border-collapse: collapse;
-    border: 1px solid #d2d6de;
+    /* border: 1px solid #d2d6de; */
     color: rgb(0, 0, 0);
 }
 
@@ -46,6 +46,24 @@ thead th:nth-child(5) {
 th, td {
     padding: 5px;
 }
+
+tr {
+    border-top: 1px solid lightgray;
+    min-height: 25px;
+}
+
+tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+tr:nth-child(odd) {
+    background: white;
+}
+
+tr:first-child {
+    background: white;
+}
+
 
 .NegativeBetrag {
     color: red;
@@ -132,6 +150,7 @@ ul.nav > li > a {
     display: inline-block;
     background-color: #f0f0f0;
     height: 100vh;
+    width: 100%;
     margin: 15px;
 
 }
@@ -145,14 +164,88 @@ ul.nav > li > a {
 
 #revenue {
     display: inline-block;
-    border-top: #d2d6de;
+    margin: 0px;
+    /* border-top: 3px solid #d2d6de; */
     float: left;
-    width: 300px;
+    width: 600px;
 }
 
 #expenditure {
     display: inline-block;
-    border-top: #d2d6de;
+    /* border-top: 3px solid #d2d6de; */
     float: left;
-    width: 300px;
+    width: 600px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 5px;
+    border: 0;
+    border-top: 1px solid lightgray;
+}
+
+h1 {
+    margin: 5px;
+}
+
+#neue-quelle-button {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #d2d6de;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #8DA242;
+}
+
+#neue-quelle-button:hover {
+    background-color: #6f7f35;
+}
+
+#table-revenue {
+    margin: 0;
+    border: 1px solid #f4f4f4;
+    border-collapse: collapse;
+}
+
+.t1 {
+    margin-left: 10px;
+    background: #f0f0f0;
+    border: 1px solid #333;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+}
+
+.t2 {
+    margin-left: -5px;
+    background: #f0f0f0;
+    border: 1px solid #333;
+    /* border-top-left-radius: 2px; */
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+}
+
+.t3 {
+    margin-left: -5px;
+    background: rgb(205, 0, 0);
+    border: 1px solid #333;
+    color: white;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
 }
