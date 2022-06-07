@@ -9,6 +9,9 @@ def home(request):
 def about(request):
     return render(request, "about.html")
 
+def createbudget(request):
+    return render(request, "createbudget.html")
+
 def contact(request):
     return render(request, "contact.html")
 

@@ -9,7 +9,9 @@
     <div id="revenue">
         <h1>Budgets</h1>
         <hr/>
-        <button id="neue-quelle-button"><i class="fa-solid fa-plus"></i>&nbsp;Neue Quelle</button>
+        <form action="{% url 'createbudget' %}">
+            <button id="neue-quelle-button"><i class="fa-solid fa-plus"></i>&nbsp;Neue Quelle</button>
+        </form>
         <hr/>
         <table id="table-revenue">
             <caption><h1>Einnahmen</h1></caption>
@@ -77,5 +79,5 @@
 
 {% for x in budget %}
 <p>{{x.name}},{{x.budget}}</p></br>
-{% endfor %}
-{% endblock %} -->
+{% endfor %} -->
+{% endblock %}
