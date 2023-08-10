@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: cleanup
+      run: rm -rf ~/.ssh
     - name: Send greeting
       run: |
         echo "vor install"
@@ -33,5 +35,4 @@ jobs:
         ssh-keyscan -H ${{ secrets.host }} > ~/.ssh/known_hosts
     - name: connect
       run: ssh ${{ secrets.user }}@${{ secrets.host }} "whoamii"
-    - name: cleanup
-      run: rm -rf ~/.ssh
+
