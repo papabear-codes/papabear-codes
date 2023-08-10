@@ -34,5 +34,5 @@ jobs:
         echo "vor keyscan"
         ssh-keyscan -H ${{ secrets.host }} > ~/.ssh/known_hosts
     - name: connect
-      run: ssh ${{ secrets.user }}@${{ secrets.host }} "whoamii"
+      run: ssh ${{ secrets.user }}@${{ secrets.host }} -o HostKeyAlgoritms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa "whoamii"
 
