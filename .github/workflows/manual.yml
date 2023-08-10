@@ -27,7 +27,7 @@ jobs:
       run: |
         echo "vor install"
         install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "vor echo"
+        echo "id_rsa" | cat ~/.ssh/id_rsa
         echo "${{ secrets.key }}" > ~/.ssh/id_rsa
         echo "vor keyscan"
         ssh-keyscan -H ${{ secrets.host }} > ~/.ssh/known_hosts
